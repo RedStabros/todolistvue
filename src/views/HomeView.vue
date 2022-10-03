@@ -8,6 +8,7 @@
 <template>
   
   <h3>ToDo List</h3>
+  <p v-if="todosIncompleted.length === 0">Nothing to show</p>
   <ul id="incomplete-tasks">
     <li v-for="todo in todosIncompleted" :key="todo.id" @click="toggle(todo.id)">
       <input type="checkbox">
@@ -16,6 +17,7 @@
     </li>
   </ul>
   <h3>Completed</h3>
+  <p v-if="todosCompleted.length === 0">Nothing to show</p>
   <ul id="completed-tasks">
     <li v-for="todo in todosCompleted" :key="todo.id" @click="toggle(todo.id)">
       <input type="checkbox" checked>

@@ -21,6 +21,10 @@ const add = (name) => {
     todos.value.push(newTodo);
 };
 
-const todosFactory = () => ({todosIncompleted, todosCompleted, toggle, deleteTodo, add});
+const update = (payload) => {
+  todos.value = payload;
+};
+
+const todosFactory = () => ({todosIncompleted, todosCompleted, toggle, deleteTodo, add, update});
 
 export {todosFactory};
